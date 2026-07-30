@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  xonnix-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xonnix-official-web
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
